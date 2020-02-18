@@ -8,12 +8,17 @@
         </li>
         <li class="{{ setActiveRoute('sectors.index') }}">
           <a href="{{ route('sectors.index') }}">
-            <i class="fa fa-dashboard"></i> <span>Sector</span>
+            <i class="fa fa-dashboard"></i> <span>Sectores</span>
           </a>
         </li>
         <li class="{{ setActiveRoute(['estados.index','estados.create']) }}">
           <a href="{{ route('estados.index') }}">
-            <i class="fa fa-dashboard"></i> <span>Estado</span>
+            <i class="fa fa-dashboard"></i> <span>Estados</span>
+          </a>
+        </li>
+        <li class="{{ setActiveRoute(['prioridads.index','prioridads.create']) }}">
+          <a href="{{ route('prioridads.index') }}">
+            <i class="fa fa-dashboard"></i> <span>Prioridades</span>
           </a>
         </li>
           @can('view_parametros_usuario')

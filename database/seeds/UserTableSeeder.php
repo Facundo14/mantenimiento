@@ -190,6 +190,52 @@ class UserTableSeeder extends Seeder
         ]);
 
         //
+        //Permisos Estado
+        //
+        $verEstadoPermission = Permission::create([
+            'name' => 'view_estados',
+            'display_name' => 'Ver estados'
+        ]);
+
+        $CrearEstadoPermission = Permission::create([
+            'name' => 'create_estados',
+            'display_name' => 'Crear estados'
+        ]);
+
+        $ActualizarEstadoPermission = Permission::create([
+            'name' => 'edit_estados',
+            'display_name' => 'Editar estados'
+        ]);
+
+        $EliminarEstadoPermission = Permission::create([
+            'name' => 'delete_estados',
+            'display_name' => 'Eliminar estados'
+        ]);
+
+        //
+        //Permisos Prioridad
+        //
+        $verPrioridadPermission = Permission::create([
+            'name' => 'view_prioridads',
+            'display_name' => 'Ver prioridads'
+        ]);
+
+        $CrearPrioridadermission = Permission::create([
+            'name' => 'create_prioridads',
+            'display_name' => 'Crear prioridads'
+        ]);
+
+        $ActualizarPrioridadPermission = Permission::create([
+            'name' => 'edit_prioridads',
+            'display_name' => 'Editar prioridads'
+        ]);
+
+        $EliminarPrioridadPermission = Permission::create([
+            'name' => 'delete_prioridads',
+            'display_name' => 'Eliminar prioridads'
+        ]);
+
+        //
         //Permisos parámetros
         //
         $VerParametroPermission = Permission::create([

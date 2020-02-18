@@ -59,6 +59,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     //Estados rutas
     Route::resource('estados', 'EstadoController', ['middleware' => 'auth','except' => 'show']);
 
+    //Prioridades rutas
+    Route::resource('prioridads', 'PrioridadController', ['middleware' => 'auth','except' => 'show']);
+
     // Authentication Routes...
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
     Route::post('login', 'Auth\LoginController@login');
