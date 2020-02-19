@@ -1,6 +1,6 @@
 @extends('admin.layout')
 @section('header')
-	 <h1>
+   <h1>
         Estados
         <small>Listado</small>
       </h1>
@@ -11,19 +11,26 @@
 @stop
 @section('contenido')
 <div class="row">
-	<div class='col-md-12'>
+  <div class='col-md-12'>
         <div class="box box-solid">
             <div class="box-body">
                 <div class="row">
-                    <div class="col-md-12 col-sm-8">
+                    <div class="col-md-2 col-sm-4">
+                        <div class="box-header">
+                            <i class="fa fa-cogs"></i>
+                            <h3 class="box-title">Configuraciones</h3>
+                        </div>
+                        <!-- Navigation - folders-->
+                        @include('admin.partials.navegationsfolders')
+                    </div><!-- /.col (LEFT) -->
+                    <div class="col-md-10 col-sm-8">
 
                         <div class='box box-solid box-primary'>
                             <div class="box-header">
-              							  <h3 class="box-title">Listado de Estados</h3>
-              							</div>
-                            <div class='box-body pad'>
-								              @include('estados.list')
-                            </div>
+                <h3 class="box-title">Listado de estados</h3>
+              </div>
+            <div class="box-body">
+              @include('estados.list')
                         </div><!-- /.box -->
                     </div><!-- /.col (RIGHT) -->
                 </div><!-- /.row -->

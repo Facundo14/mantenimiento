@@ -6,20 +6,9 @@
             <i class="fa fa-dashboard"></i> <span>Inicio</span>
           </a>
         </li>
-        <li class="{{ setActiveRoute('sectors.index') }}">
-          <a href="{{ route('sectors.index') }}">
-            <i class="fa fa-dashboard"></i> <span>Sectores</span>
-          </a>
-        </li>
-        <li class="{{ setActiveRoute(['estados.index','estados.create']) }}">
-          <a href="{{ route('estados.index') }}">
-            <i class="fa fa-dashboard"></i> <span>Estados</span>
-          </a>
-        </li>
-        <li class="{{ setActiveRoute(['prioridads.index','prioridads.create']) }}">
-          <a href="{{ route('prioridads.index') }}">
-            <i class="fa fa-dashboard"></i> <span>Prioridades</span>
-          </a>
+        <li class="{{ setActiveRoute(['sectors.index', 'sectors.create','sectors.edit','pisos.index', 'pisos.create','pisos.edit','estados.index', 'estados.create', 'estados.edit','prioridads.index', 'prioridads.create', 'prioridads.edit']) }}">
+            <a href="{{ route('pisos.index') }}"><i class="fa fa-cogs"></i> <span>Configuraciones</span>
+            </a>
         </li>
           @can('view_parametros_usuario')
           <li class="treeview {{ setActiveRoute(['admin.empresas.index', 'admin.empresas.create','admin.users.index', 'admin.users.create','admin.roles.index', 'admin.roles.edit','admin.permissions.index', 'admin.permissions.edit','admin.paises.index', 'admin.paises.create', 'admin.provincias.index', 'admin.provincias.create']) }}">

@@ -2,11 +2,17 @@
 <div style="margin-top: 15px;">
     <ul class="nav nav-pills nav-stacked">
         <li class="header ">Seleccionar</li>
-        <li class="{{setActiveRoute(['admin.paises.index', 'admin.paises.create', 'admin.paises.edit'])}}">
-            <a href="{{ route('admin.paises.index') }}"> País</a>
+        <li class="{{setActiveRoute(['pisos.index', 'pisos.create', 'pisos.edit'])}}">
+            <a href="{{ route('pisos.index') }}"> Piso</a>
         </li>
-       <li class="{{setActiveRoute(['admin.provincias.index', 'admin.provincias.create', 'admin.provincias.edit'])}}">
-        	<a href="{{ route('admin.provincias.index') }}"> Provincia</a>
+       <li class="{{setActiveRoute(['sectors.index', 'sectors.create', 'sectors.edit'])}}">
+        	<a href="{{ route('sectors.index') }}"> Sector</a>
+        </li>
+        <li class="{{setActiveRoute(['prioridads.index', 'prioridads.create', 'prioridads.edit'])}}">
+            <a href="{{ route('prioridads.index') }}"> Prioridades</a>
+        </li>
+        <li class="{{setActiveRoute(['estados.index', 'estados.create', 'estados.edit'])}}">
+            <a href="{{ route('estados.index') }}"> Estados</a>
         </li> {{--
         <li class="{{setActiveRoute('admin.localidades.index')}}">
         	<a href="{{ route('admin.localidades.index') }}"> Localidad</a>

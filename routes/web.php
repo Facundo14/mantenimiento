@@ -53,6 +53,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     //Paises rutas
     Route::resource('categorias', 'CategoriaController', ['middleware' => 'auth','except' => 'show']);
 
+    //Pisos rutas
+    Route::resource('pisos', 'PisoController', ['middleware' => 'auth','except' => 'show']);
+
     //Sectors rutas
     Route::resource('sectors', 'SectorController', ['middleware' => 'auth','except' => 'show']);
 

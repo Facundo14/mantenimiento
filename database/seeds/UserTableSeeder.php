@@ -167,6 +167,29 @@ class UserTableSeeder extends Seeder
         ]);
 
         //
+        //Permisos Pisos
+        //
+        $verPisoPermission = Permission::create([
+            'name' => 'view_pisos',
+            'display_name' => 'Ver pisos'
+        ]);
+
+        $CrearPisoPermission = Permission::create([
+            'name' => 'create_pisos',
+            'display_name' => 'Crear pisos'
+        ]);
+
+        $ActualizarPisoPermission = Permission::create([
+            'name' => 'edit_pisos',
+            'display_name' => 'Editar pisos'
+        ]);
+
+        $EliminarPisoPermission = Permission::create([
+            'name' => 'delete_pisos',
+            'display_name' => 'Eliminar pisos'
+        ]);
+
+        //
         //Permisos Sectors
         //
         $verSectorPermission = Permission::create([
