@@ -71,20 +71,22 @@
 
 </div>
 @stop
-
 @push('style')
    <!-- Select2 -->
-  <link rel="stylesheet" href="/adminlte/plugins/select2/select2.min.css">
+  <link rel="stylesheet" href="{{ asset('adminlte/plugins/select2/select2.min.css') }}">
 @endpush
 
 @push('scripts')
-<script>
-$(function () {
-    //Initialize Select2 Elements
-    $('.select2').select2()
-   }
- );
-</script>
+
 <!-- Select2 -->
-<script src="/adminlte/plugins/select2/select2.full.min.js"></script>
+<script src="{{ asset('adminlte/plugins/select2/select2.full.min.js') }}"></script>
+<script>
+	$(".select2").select2({
+		language: {
+		noResults: function (params) {
+			return "Sin resultados";
+		}
+		}
+	 });
+</script>
 @endpush

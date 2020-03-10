@@ -68,5 +68,10 @@ class User extends Authenticatable
     	return $this->belongsTo(Puesto::class, 'puesto_id');
     }
 
+     public function pedidos()
+    {
+        return $this->hasMany(Pedido::class);
+    }
+
 
 }

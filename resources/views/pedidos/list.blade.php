@@ -2,25 +2,30 @@
     <thead>
     <tr>
       <th>#</th>
-      <th>Nombre</th>
-      <th>Descripcion</th>
+      <th>Pedido</th>
+      <th>Usuario</th>
+      <th>Prioridad</th>
+      <th>Sector</th>
+      <th>Estado</th>
       <th>
-          &nbsp;<a href="{{route('prioridads.create')}}" class="btn btn-primary btn-xs" title="Agregar"><i class="fa fa-plus"></i></a>
+          &nbsp;<a href="{{route('pedidos.create')}}" class="btn btn-primary btn-xs" title="Agregar"><i class="fa fa-plus"></i></a>
       </th>
     </tr>
     </thead>
     <tbody>
-    	@foreach($prioridads as $prioridad)
+    	@foreach($pedidos as $pedido)
     	<tr>
-    		<td>{{ $prioridad->id }}</td>
-    		<td>{{ $prioridad->nombre }}</td>
-    		<td>{{ $prioridad->descripcion }}</td>
+    		<td>{{ $pedido->pedido }}</td>
+    		<td>{{ $pedido->user->name }}</td>
+        <td>{{ $pedido->prioridad->nombre }}</td>
+        <td>{{ $pedido->sector->nombre }}</td>
+    		<td>{{ $pedido->estado }}</td>
     		<td>
-    			@can('update', $prioridad)
-            &nbsp;<a href="{{ route('prioridads.edit', $prioridad) }}" class="btn btn-warning btn-xs" title="Editar"><i class="fa fa-edit"></i></a>
+    			@can('update', $pedido)
+            &nbsp;<a href="{{ route('pedidos.edit', $pedido) }}" class="btn btn-warning btn-xs" title="Editar"><i class="fa fa-edit"></i></a>
     			@endcan
-    			@can('delete', $prioridad)
-	    			<form action="{{ route('prioridads.destroy', $prioridad) }}" method="POST" style="display: inline;" >
+    			@can('delete', $pedido)
+	    			<form action="{{ route('pedidos.destroy', $pedido) }}" method="POST" style="display: inline;" >
 	    				{{csrf_field()}} {{method_field('DELETE')}}
 	    				<button title="Eliminar" class="btn btn-danger btn-xs" onclick="return confirm('Estas seguro de querer eliminar?')"><i class="fa fa-trash-o"></i></button>
 	    			</form>

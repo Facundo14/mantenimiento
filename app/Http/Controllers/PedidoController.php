@@ -24,7 +24,7 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        $this->authorize('view');
+        //$this->authorize('view');
 
         return view('pedidos.index', [
             'pedidos' => Pedido::all()
@@ -38,7 +38,7 @@ class PedidoController extends Controller
      */
     public function create()
     {
-        $this->authorize('create', $pedido = new Pedido);
+        //$this->authorize('create', $pedido = new Pedido);
 
         return view('pedidos.create', compact('pedido'));
     }

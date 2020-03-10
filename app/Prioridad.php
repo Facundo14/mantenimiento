@@ -20,4 +20,9 @@ class Prioridad extends Model
 	{
 	    $this->attributes['descripcion'] = strtoupper($value);
 	}
+
+	 public function pedidos()
+    {
+        return $this->hasMany(Pedido::class);
+    }
 }

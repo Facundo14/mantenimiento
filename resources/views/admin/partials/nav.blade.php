@@ -6,6 +6,11 @@
             <i class="fa fa-dashboard"></i> <span>Inicio</span>
           </a>
         </li>
+        <li class="{{ setActiveRoute(['pedidos.create','pedidos.index','pedidos.edit']) }}">
+          <a href="{{ route('pedidos.index') }}">
+            <i class="fa fa-ticket"></i> <span>Pedidos</span>
+          </a>
+        </li>
         <li class="{{ setActiveRoute(['sectors.index', 'sectors.create','sectors.edit','pisos.index', 'pisos.create','pisos.edit','estados.index', 'estados.create', 'estados.edit','prioridads.index', 'prioridads.create', 'prioridads.edit']) }}">
             <a href="{{ route('pisos.index') }}"><i class="fa fa-cogs"></i> <span>Configuraciones</span>
             </a>

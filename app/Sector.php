@@ -24,4 +24,9 @@ class Sector extends Model
 	public function pisos(){
     	return $this->belongsTo(Piso::class, 'piso_id');
     }
+
+    public function pedidos()
+    {
+        return $this->hasMany(Pedido::class);
+    }
 }

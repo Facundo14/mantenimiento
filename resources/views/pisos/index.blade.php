@@ -53,8 +53,4 @@
 <script src="{{ asset('/adminlte/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{ asset('/adminlte/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
 <script src="{{ asset('/adminlte/js/data-table-pages.js')}}"></script>
-
-
-
-
 @endpush
