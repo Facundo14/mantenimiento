@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sector extends Model
 {
     protected $fillable = [
-        'nombre', 'descripcion'
+        'nombre', 'descripcion', 'piso_id'
     ];
 
     // Para guardar campos en mayusculas
@@ -20,4 +20,8 @@ class Sector extends Model
 	{
 	    $this->attributes['descripcion'] = strtoupper($value);
 	}
+
+	public function pisos(){
+    	return $this->belongsTo(Piso::class, 'piso_id');
+    }
 }

@@ -10,9 +10,6 @@
         </li>
         <li class="{{setActiveRoute(['prioridads.index', 'prioridads.create', 'prioridads.edit'])}}">
             <a href="{{ route('prioridads.index') }}"> Prioridades</a>
-        </li>
-        <li class="{{setActiveRoute(['estados.index', 'estados.create', 'estados.edit'])}}">
-            <a href="{{ route('estados.index') }}"> Estados</a>
         </li> {{--
         <li class="{{setActiveRoute('admin.localidades.index')}}">
         	<a href="{{ route('admin.localidades.index') }}"> Localidad</a>

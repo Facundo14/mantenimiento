@@ -59,11 +59,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     //Sectors rutas
     Route::resource('sectors', 'SectorController', ['middleware' => 'auth','except' => 'show']);
 
-    //Estados rutas
-    Route::resource('estados', 'EstadoController', ['middleware' => 'auth','except' => 'show']);
-
     //Prioridades rutas
     Route::resource('prioridads', 'PrioridadController', ['middleware' => 'auth','except' => 'show']);
+
+    //Pedidos rutas
+    Route::resource('pedidos', 'PedidoController', ['middleware' => 'auth','except' => 'show']);
 
     // Authentication Routes...
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

@@ -17,6 +17,8 @@ class CreateSectorsTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('descripcion')->nullable();
+            $table->integer('piso_id')->unsigned()->nullable();
+            $table->foreign('piso_id')->references('id')->on('pisos');
             $table->timestamps();
         });
     }

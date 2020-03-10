@@ -213,29 +213,6 @@ class UserTableSeeder extends Seeder
         ]);
 
         //
-        //Permisos Estado
-        //
-        $verEstadoPermission = Permission::create([
-            'name' => 'view_estados',
-            'display_name' => 'Ver estados'
-        ]);
-
-        $CrearEstadoPermission = Permission::create([
-            'name' => 'create_estados',
-            'display_name' => 'Crear estados'
-        ]);
-
-        $ActualizarEstadoPermission = Permission::create([
-            'name' => 'edit_estados',
-            'display_name' => 'Editar estados'
-        ]);
-
-        $EliminarEstadoPermission = Permission::create([
-            'name' => 'delete_estados',
-            'display_name' => 'Eliminar estados'
-        ]);
-
-        //
         //Permisos Prioridad
         //
         $verPrioridadPermission = Permission::create([

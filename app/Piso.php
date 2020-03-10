@@ -20,4 +20,10 @@ class Piso extends Model
 	{
 	    $this->attributes['descripcion'] = strtoupper($value);
 	}
+
+	public function sector()
+    {
+    	return $this->hasMany(Sector::class);
+    }
+
 }

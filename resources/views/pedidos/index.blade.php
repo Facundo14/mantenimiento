@@ -1,12 +1,12 @@
 @extends('admin.layout')
 @section('header')
    <h1>
-        Estados
+        Prioridades
         <small>Listado</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{ route('inicio') }}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">Estados</li>
+        <li class="active">Prioridades</li>
       </ol>
 @stop
 @section('contenido')
@@ -27,10 +27,10 @@
 
                         <div class='box box-solid box-primary'>
                             <div class="box-header">
-                <h3 class="box-title">Listado de estados</h3>
+                <h3 class="box-title">Listado de prioridades</h3>
               </div>
             <div class="box-body">
-              @include('estados.list')
+              @include('prioridads.list')
                         </div><!-- /.box -->
                     </div><!-- /.col (RIGHT) -->
                 </div><!-- /.row -->

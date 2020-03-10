@@ -2,6 +2,7 @@
     <thead>
     <tr>
       <th>#</th>
+      <th>Piso</th>
       <th>Nombre</th>
       <th>Descripcion</th>
       <th>
@@ -13,7 +14,8 @@
     	@foreach($sectors as $sector)
     	<tr>
     		<td>{{ $sector->id }}</td>
-    		<td>{{ $sector->nombre }}</td>
+    		<td>{{ $sector->pisos->nombre }}</td>
+        <td>{{ $sector->nombre }}</td>
     		<td>{{ $sector->descripcion }}</td>
     		<td>
     			@can('update', $sector)

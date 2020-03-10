@@ -41,7 +41,9 @@ class SectorController extends Controller
     {
         $this->authorize('create', $sector = new Sector);
 
-        return view('sectors.create', compact('sector'));
+        $pisos = \App\Piso::all();
+
+        return view('sectors.create', compact('sector', 'pisos'));
     }
 
     /**
@@ -81,7 +83,8 @@ class SectorController extends Controller
         $this->authorize('update', $sector);
 
         return view('sectors.edit', [
-            'sector' => $sector
+            'sector' => $sector,
+            'pisos' => \App\Piso::all()
         ]);
     }
 
