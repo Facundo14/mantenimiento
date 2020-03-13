@@ -5,7 +5,7 @@
       <th>Pedido</th>
       <th>Usuario</th>
       <th>Prioridad</th>
-      <th>Sector</th>
+      <th>Piso - Sector</th>
       <th>Estado</th>
       <th>
           &nbsp;<a href="{{route('pedidos.create')}}" class="btn btn-primary btn-xs" title="Agregar"><i class="fa fa-plus"></i></a>
@@ -15,12 +15,18 @@
     <tbody>
     	@foreach($pedidos as $pedido)
     	<tr>
-    		<td>{{ $pedido->pedido }}</td>
+    		<td>{{ $pedido->id }}</td>
+        <td>{{ $pedido->pedido }}</td>
     		<td>{{ $pedido->user->name }}</td>
         <td>{{ $pedido->prioridad->nombre }}</td>
-        <td>{{ $pedido->sector->nombre }}</td>
+        <td>{{ $pedido->sector->pisos->nombre }} - {{$pedido->sector->nombre }}</td>
     		<td>{{ $pedido->estado }}</td>
     		<td>
+          {{-- @can('view', $pedido) --}}
+            <button type="button" class="btn btn-xs btn-default" data-toggle="modal" data-target="#modal-ver">
+                <i class="fa fa-search"></i>
+              </button>
+          {{-- @endcan --}}
     			@can('update', $pedido)
             &nbsp;<a href="{{ route('pedidos.edit', $pedido) }}" class="btn btn-warning btn-xs" title="Editar"><i class="fa fa-edit"></i></a>
     			@endcan

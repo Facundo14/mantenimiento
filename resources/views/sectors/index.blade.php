@@ -38,6 +38,7 @@
         </div><!-- /.box -->
     </div><!-- /.col-->
 </div>
+
 @stop
 
 @push('style')

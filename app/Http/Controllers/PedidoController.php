@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Pedido;
 use Illuminate\Http\Request;
+use App\Prioridad;
+use App\Sector;
 
 class PedidoController extends Controller
 {
@@ -27,7 +29,10 @@ class PedidoController extends Controller
         //$this->authorize('view');
 
         return view('pedidos.index', [
-            'pedidos' => Pedido::all()
+            'pedidos' => Pedido::all(),
+            'pendiente' => Pedido::all()->where('estado','=','pendiente')->count(),
+            'terminados' => Pedido::all()->where('estado','=','terminado')->count(),
+            'proceso' => Pedido::all()->where('estado','=','proceso')->count()
         ]);
     }
 
@@ -40,7 +45,13 @@ class PedidoController extends Controller
     {
         //$this->authorize('create', $pedido = new Pedido);
 
-        return view('pedidos.create', compact('pedido'));
+        $prioridads = Prioridad::all();
+        $sectors = Sector::all();
+        $pendiente = Pedido::all()->where('estado','=','pendiente')->count();
+        $terminados = Pedido::all()->where('estado','=','terminado')->count();
+        $proceso = Pedido::all()->where('estado','=','proceso')->count();
+
+        return view('pedidos.create', compact('pedido','prioridads','sectors', 'cantidad'));
     }
 
     /**
@@ -61,7 +72,7 @@ class PedidoController extends Controller
 
         alert()->success('Agregado correctamente!')->autoclose(1800);
 
-        return redirect()->route('clientes.index');
+        return redirect()->route('pedidos.index');
     }
 
     /**

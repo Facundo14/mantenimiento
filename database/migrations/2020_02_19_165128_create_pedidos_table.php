@@ -23,7 +23,7 @@ class CreatePedidosTable extends Migration
             $table->foreign('prioridad_id')->references('id')->on('prioridads');
             $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('observaciones')->nullable();
+            $table->text('observaciones')->nullable();
             $table->timestamps();
         });
     }
