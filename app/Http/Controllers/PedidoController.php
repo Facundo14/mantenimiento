@@ -51,7 +51,7 @@ class PedidoController extends Controller
         $terminados = Pedido::all()->where('estado','=','terminado')->count();
         $proceso = Pedido::all()->where('estado','=','proceso')->count();
 
-        return view('pedidos.create', compact('pedido','prioridads','sectors', 'cantidad'));
+        return view('pedidos.create', compact('pedido','prioridads','sectors', 'pendiente','proceso', 'terminados'));
     }
 
     /**
